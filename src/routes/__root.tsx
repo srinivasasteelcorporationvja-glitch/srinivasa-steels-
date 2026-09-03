@@ -92,8 +92,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:title", content: "Srinivasa Steel Corporation" },
       { property: "og:description", content: "Trusted steel and TMT supplier serving construction and industrial requirements since 1994." },
-      // WhatsApp prefers an absolute URL for og:image, but relative is standard for development
-      { property: "og:image", content: "/favicon.png" }, 
+      { property: "og:url", content: "https://srinivasasteels.com" },
+      { property: "og:image", content: "https://srinivasasteels.com/favicon.png" }, 
       { property: "og:image:width", content: "512" },
       { property: "og:image:height", content: "512" },
       
@@ -101,7 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "Srinivasa Steel Corporation" },
       { name: "twitter:description", content: "Trusted steel and TMT supplier serving construction and industrial requirements since 1994." },
-      { name: "twitter:image", content: "/favicon.png" },
+      { name: "twitter:image", content: "https://srinivasasteels.com/favicon.png" },
     ],
     links: [
       {

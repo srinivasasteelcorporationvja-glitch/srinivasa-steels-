@@ -88,11 +88,15 @@ export const Footer = () => {
               Trusted steel and TMT supplier serving construction and industrial requirements since 1994.
             </p>
             <div className="flex gap-4">
-              {(['fb', 'ig', 'wa'] as const).map((type) => (
-                <a key={type} href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/80 hover:bg-ssc-gold hover:text-ssc-navy transition-all">
-                  <SocialIcon type={type} />
-                </a>
-              ))}
+              <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/80 hover:bg-ssc-gold hover:text-ssc-navy transition-all">
+                <SocialIcon type="fb" />
+              </a>
+              <a href="https://www.instagram.com/srinivasa_steel_corporation_?utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/80 hover:bg-ssc-gold hover:text-ssc-navy transition-all">
+                <SocialIcon type="ig" />
+              </a>
+              <a href="https://wa.me/919440170453?text=Hello%20Srinivasa%20Steel%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20steel%20products." target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/80 hover:bg-ssc-gold hover:text-ssc-navy transition-all">
+                <SocialIcon type="wa" />
+              </a>
             </div>
           </div>
 
@@ -192,11 +196,15 @@ export const Footer = () => {
             Trusted steel and TMT supplier serving construction and industrial requirements since 1994.
           </p>
           <div className="flex gap-4">
-            {(['fb', 'ig', 'wa'] as const).map((type) => (
-              <a key={type} href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/80 hover:bg-ssc-gold hover:text-ssc-navy transition-all">
-                <SocialIcon type={type} />
-              </a>
-            ))}
+            <a href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/80 hover:bg-ssc-gold hover:text-ssc-navy transition-all">
+              <SocialIcon type="fb" />
+            </a>
+            <a href="https://www.instagram.com/srinivasa_steel_corporation_?utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/80 hover:bg-ssc-gold hover:text-ssc-navy transition-all">
+              <SocialIcon type="ig" />
+            </a>
+            <a href="https://wa.me/919440170453?text=Hello%20Srinivasa%20Steel%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20steel%20products." target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/80 hover:bg-ssc-gold hover:text-ssc-navy transition-all">
+              <SocialIcon type="wa" />
+            </a>
           </div>
         </div>
 

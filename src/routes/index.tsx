@@ -12,8 +12,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Srinivasa Steel Corporation",
-  "url": "https://www.srinivasasteelcorporation.com/",
-  "logo": "https://www.srinivasasteelcorporation.com/logo.svg",
+  "url": "https://srinivasasteels.com/",
+  "logo": "https://srinivasasteels.com/logo.svg",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+91-9440170453",
@@ -27,8 +27,8 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Srinivasa Steel Corporation",
-  "image": "https://www.srinivasasteelcorporation.com/logo.svg",
-  "url": "https://www.srinivasasteelcorporation.com/",
+  "image": "https://srinivasasteels.com/logo.svg",
+  "url": "https://srinivasasteels.com/",
   "telephone": "+91-9440170453",
   "address": {
     "@type": "PostalAddress",
@@ -38,17 +38,17 @@ const localBusinessSchema = {
     "postalCode": "520012",
     "addressCountry": "IN"
   },
-  "description": "Trusted supplier of TMT rebars, structural steel, and industrial steel products with 40+ years of experience in Andhra Pradesh."
+  "description": "Trusted supplier of TMT rebars, structural steel, and industrial steel products with 40+ years of experience serving Vijayawada, Gannavaram, and Visakhapatnam."
 };
 
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Srinivasa Steel Corporation",
-  "url": "https://www.srinivasasteelcorporation.com/",
+  "url": "https://srinivasasteels.com/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://www.srinivasasteelcorporation.com/products?product={search_term_string}",
+    "target": "https://srinivasasteels.com/products?product={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 };
@@ -57,16 +57,16 @@ export const Route = createFileRoute("/")({
   component: HomePage,
   head: () => ({
     meta: [
-      { title: "Srinivasa Steel Corporation | TMT Bars & Steel Supplier in Andhra Pradesh" },
-      { name: "description", content: "Srinivasa Steel Corporation supplies high-quality TMT rebars, structural steel, and wire products for construction and industrial needs with 40+ years experience in Vijayawada & Gannavaram." },
-      { property: "og:title", content: "Srinivasa Steel Corporation | TMT Bars & Steel Supplier in Andhra Pradesh" },
-      { property: "og:description", content: "Srinivasa Steel Corporation supplies high-quality TMT rebars, structural steel, and wire products for construction and industrial needs with 40+ years experience in Vijayawada & Gannavaram." },
-      { property: "og:url", content: "https://www.srinivasasteelcorporation.com/" },
-      { property: "og:image", content: "https://www.srinivasasteelcorporation.com/hero/hero-5.jpg" },
+      { title: "Srinivasa Steel Corporation | TMT Bars & Steel Supplier in Vijayawada & Vizag" },
+      { name: "description", content: "Srinivasa Steel Corporation supplies high-quality TMT rebars, structural steel, and wire products for construction and industrial needs across Vijayawada, Gannavaram, and Visakhapatnam. 40+ years of trust." },
+      { property: "og:title", content: "Srinivasa Steel Corporation | TMT Bars & Steel Supplier" },
+      { property: "og:description", content: "Srinivasa Steel Corporation supplies high-quality TMT rebars, structural steel, and wire products for construction and industrial needs across Vijayawada, Gannavaram, and Visakhapatnam. 40+ years of trust." },
+      { property: "og:url", content: "https://srinivasasteels.com/" },
+      { property: "og:image", content: "https://srinivasasteels.com/hero/hero-5.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.srinivasasteelcorporation.com/" }
+      { rel: "canonical", href: "https://srinivasasteels.com/" }
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(organizationSchema) },

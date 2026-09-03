@@ -9,42 +9,42 @@ const strengths = [
     description: "Built on a foundation of trust and industrial expertise since 1994.",
     label: "FOUNDATION-94",
     image: "/images/stock/about page/discover over capabilities section/40 years experience_.png", // Foundation / Industrial yard
-    alt: "Premium steel stockyard representing 40 years of excellence"
+    alt: "Srinivasa Steel Corporation stockyard showcasing 40 years of industrial steel supply excellence in Vijayawada"
   },
   {
     title: "STEEL & TMT SUPPLY",
     description: "Comprehensive range of high-grade construction and structural steel.",
     label: "SPEC-550D",
     image: "/images/stock/about page/business strenghts/steel and tmt supply.png", // TMT Rebars
-    alt: "High-quality TMT reinforcement steel rebars"
+    alt: "High-grade TMT reinforcement rebars supplied by Srinivasa Steel in Andhra Pradesh"
   },
   {
     title: "WIRE PRODUCTS",
     description: "Extensive inventory of high-quality industrial and construction wire.",
     label: "WIRE-SEC-01",
     image: "/images/stock/about page/business strenghts/wire products.jpg", // Wire coils
-    alt: "Industrial steel wire coils"
+    alt: "Industrial steel binding wire coils and products available at Srinivasa Steel"
   },
   {
     title: "DECOILING SOLUTIONS",
     description: "Precision engineered processing for custom industrial requirements.",
     label: "PROC-DECOIL",
     image: "/images/stock/about page/business strenghts/decoiling solutions 2.jpg", // Processing / Machinery
-    alt: "Industrial steel processing machinery"
+    alt: "Precision decoiling machinery and solutions at Srinivasa Steel Corporation facilities"
   },
   {
     title: "MOU / DEALER RELATIONS",
     description: "Direct supply relationships ensuring material authenticity and availability.",
     label: "PARTNER-CERT",
     image: "/images/stock/about page/business strenghts/mou.png", // Professional distribution
-    alt: "Professional steel distribution and warehouse"
+    alt: "Authorized dealer and MOU partnerships for genuine steel distribution in Vizag and Vijayawada"
   },
   {
     title: "REGIONAL PRESENCE",
     description: "Strategically located yards in Vijayawada, Gannavaram, and Vizag.",
     label: "DIST-NETWORK",
     image: "/images/stock/about page/business strenghts/reginal presence_.png", // Logistics
-    alt: "Steel logistics and regional distribution center"
+    alt: "Srinivasa Steel regional distribution centers across Vijayawada, Gannavaram, and Visakhapatnam"
   }
 ];
 
@@ -178,7 +178,7 @@ export const WhyChooseUs = () => {
             {strengths.map((item, idx) => (
               <div 
                 key={idx} 
-                className="flex-shrink-0 w-[85%] snap-center"
+                className="flex-shrink-0 w-full snap-center"
               >
                 <StrengthCard item={item} isMobile={true} />
               </div>

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://www.srinivasasteelcorporation.com/sitemap.xml
+Sitemap: https://srinivasasteels.com/sitemap.xml

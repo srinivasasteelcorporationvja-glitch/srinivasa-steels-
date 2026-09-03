@@ -10,7 +10,7 @@ const products = [
     name: "TMT Rebars",
     description: "Premium bundles of ribbed TMT reinforcement steel bars. Available in 5mm, 5.5mm, and 6mm TMT specifications.",
     image: "/images/stock/home page (industrial products )/tmt bars.png",
-    alt: "Bundles of high-quality ribbed TMT reinforcement bars at Srinivasa Steel Corporation yard",
+    alt: "Bundles of high-quality ribbed TMT reinforcement bars at Srinivasa Steel Corporation yard in Vijayawada",
     meta: [{label: "GRADE", value: "FE 550D"}, {label: "SIZES", value: "5MM - 6MM"}]
   },
   {
@@ -19,7 +19,7 @@ const products = [
     name: "Binding Wire",
     description: "Industrial grade steel wire and binding wire coils designed for precise reinforcement anchoring.",
     image: "/images/stock/home page (industrial products )/binding wires.png",
-    alt: "High-quality industrial steel binding wire supplied by Srinivasa Steel Corporation",
+    alt: "High-quality industrial steel binding wire supplied by Srinivasa Steel Corporation in Andhra Pradesh",
     meta: [{label: "MATERIAL", value: "MILD STEEL"}, {label: "GAUGE", value: "16-18 SWG"}]
   },
   {
@@ -28,7 +28,7 @@ const products = [
     name: "Oil Rods",
     description: "High-performance steel oil rods engineered for specialized industrial and mechanical applications.",
     image: "/images/stock/home page (industrial products )/oil rods.png",
-    alt: "Professional grade industrial steel oil rods from Srinivasa Steel Corporation",
+    alt: "Professional grade industrial steel oil rods from Srinivasa Steel Corporation Vizag",
     meta: [{label: "APPLICATION", value: "INDUSTRIAL"}, {label: "STRENGTH", value: "HIGH YIELD"}]
   },
   {
@@ -37,7 +37,7 @@ const products = [
     name: "Decoiled Steel",
     description: "Precision steel coil processing (2mm–4.5mm), straightening and cut-to-length services (10–40 feet).",
     image: "/images/stock/home page (industrial products )/decoiled steels_.png",
-    alt: "Industrial steel decoiling machine processing steel at Srinivasa Steel Corporation",
+    alt: "Industrial steel decoiling machine processing steel at Srinivasa Steel Corporation Gannavaram facility",
     meta: [{label: "THICKNESS", value: "2MM - 4.5MM"}, {label: "LENGTH", value: "10FT - 40FT"}]
   },
   {
@@ -46,7 +46,7 @@ const products = [
     name: "Steel Coils",
     description: "Hot-rolled and cold-rolled steel coils available in bulk quantities for immediate dispatch and industrial manufacturing.",
     image: "/images/stock/home page (industrial products )/steel coils_.png", 
-    alt: "Massive industrial steel coils supplied by Srinivasa Steel Corporation",
+    alt: "Massive industrial steel coils supplied by Srinivasa Steel Corporation for manufacturing",
     meta: [{label: "TYPE", value: "HR / CR"}, {label: "AVAILABILITY", value: "BULK READY"}]
   },
   {
@@ -55,7 +55,7 @@ const products = [
     name: "Structural Steel",
     description: "Heavy-duty I-beams, channels, and angles designed for large-scale construction and framework.",
     image: "/images/stock/home page (industrial products )/sturctered steels .png",
-    alt: "Structural steel beams and channels available at Srinivasa Steel Corporation",
+    alt: "Structural steel beams and channels available at Srinivasa Steel Corporation stockyards",
     meta: [{label: "CATEGORY", value: "HEAVY DUTY"}, {label: "USE", value: "FRAMEWORK"}]
   }
 ];
@@ -226,7 +226,7 @@ const ProductShowcase = () => {
             {products.map((product, index) => (
               <div 
                 key={product.index} 
-                className="flex-shrink-0 w-[85%] snap-center"
+                className="flex-shrink-0 w-full snap-center"
               >
                 <ProductCard product={product} index={index} />
               </div>

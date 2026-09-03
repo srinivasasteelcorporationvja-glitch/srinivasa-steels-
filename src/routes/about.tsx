@@ -15,34 +15,49 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.srinivasasteelcorporation.com/"
+      "item": "https://srinivasasteels.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "About",
-      "item": "https://www.srinivasasteelcorporation.com/about"
+      "item": "https://srinivasasteels.com/about"
     }
   ]
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Srinivasa Steel Corporation",
+  "url": "https://srinivasasteels.com/",
+  "logo": "https://srinivasasteels.com/logo.svg",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-9440170453",
+    "contactType": "customer service",
+    "areaServed": "IN"
+  }
 };
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About Srinivasa Steel Corporation | 40+ Years of Steel Supply" },
-      { name: "description", content: "Learn about Srinivasa Steel Corporation's 40+ year legacy, our advanced stockyard facilities, weighment accuracy, and our commitment to on-time steel delivery." },
-      { property: "og:title", content: "About Srinivasa Steel Corporation | 40+ Years of Steel Supply" },
-      { property: "og:description", content: "Learn about Srinivasa Steel Corporation's 40+ year legacy, our advanced stockyard facilities, weighment accuracy, and our commitment to on-time steel delivery." },
-      { property: "og:url", content: "https://www.srinivasasteelcorporation.com/about" },
-      { property: "og:image", content: "https://www.srinivasasteelcorporation.com/hero/hero-5.jpg" },
+      { title: "About Srinivasa Steel Corporation | 40+ Years of Industrial Steel" },
+      { name: "description", content: "Learn about Srinivasa Steel Corporation's 40+ year legacy, our advanced stockyard facilities in Vijayawada & Gannavaram, and our commitment to on-time steel delivery." },
+      { property: "og:title", content: "About Srinivasa Steel Corporation | 40+ Years of Industrial Steel" },
+      { property: "og:description", content: "Learn about Srinivasa Steel Corporation's 40+ year legacy, our advanced stockyard facilities in Vijayawada & Gannavaram, and our commitment to on-time steel delivery." },
+      { property: "og:url", content: "https://srinivasasteels.com/about" },
+      { property: "og:image", content: "https://srinivasasteels.com/hero/hero-5.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.srinivasasteelcorporation.com/about" }
+      { rel: "canonical", href: "https://srinivasasteels.com/about" }
     ],
     scripts: [
-      { type: "application/ld+json", children: JSON.stringify(breadcrumbSchema) }
+      { type: "application/ld+json", children: JSON.stringify(breadcrumbSchema) },
+      { type: "application/ld+json", children: JSON.stringify(organizationSchema) }
     ]
   }),
 });

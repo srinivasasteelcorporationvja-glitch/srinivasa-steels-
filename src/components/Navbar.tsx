@@ -138,6 +138,7 @@ export const Navbar = () => {
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 * i }}>
                     <Link
                       to={link.href}
+                      preload="intent"
                       activeOptions={{ exact: link.href === '/' }}
                       className={`relative text-micro transition-all duration-300 py-1.5 px-4 rounded-[6px] whitespace-nowrap cursor-pointer flex items-center justify-center gap-2 ${
                         isActive 
@@ -283,6 +284,7 @@ export const Navbar = () => {
                         <Link
                           to={link.href}
                           onClick={() => setIsOpen(false)}
+                          preload="intent"
                           activeOptions={{ exact: link.href === '/' }}
                           className={`group flex items-center gap-6 cursor-pointer`}
                         >

@@ -25,15 +25,37 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.srinivasasteelcorporation.com/"
+      "item": "https://srinivasasteels.com/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Contact",
-      "item": "https://www.srinivasasteelcorporation.com/contact"
+      "item": "https://srinivasasteels.com/contact"
     }
   ]
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Srinivasa Steel Corporation - Vijayawada",
+  "image": "https://srinivasasteels.com/logo.svg",
+  "url": "https://srinivasasteels.com/contact",
+  "telephone": "+91-9440170453",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plot No. 90, Iron Complex, Godown Block No. 36/3, Bhavanipuram",
+    "addressLocality": "Vijayawada",
+    "addressRegion": "Andhra Pradesh",
+    "postalCode": "520012",
+    "addressCountry": "IN"
+  },
+  "branchOf": {
+    "@type": "Organization",
+    "name": "Srinivasa Steel Corporation",
+    "url": "https://srinivasasteels.com/"
+  }
 };
 
 const contactSchema = z.object({
@@ -59,19 +81,20 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact Srinivasa Steel Corporation | Vijayawada & Gannavaram" },
-      { name: "description", content: "Contact Srinivasa Steel Corporation for bulk steel, TMT rebars, and industrial decoiling requirements in Vijayawada and Gannavaram." },
-      { property: "og:title", content: "Contact Srinivasa Steel Corporation | Vijayawada & Gannavaram" },
-      { property: "og:description", content: "Contact Srinivasa Steel Corporation for bulk steel, TMT rebars, and industrial decoiling requirements in Vijayawada and Gannavaram." },
-      { property: "og:url", content: "https://www.srinivasasteelcorporation.com/contact" },
-      { property: "og:image", content: "https://www.srinivasasteelcorporation.com/hero/hero-5.jpg" },
+      { title: "Contact Srinivasa Steel Corporation | Locations in Vijayawada & Vizag" },
+      { name: "description", content: "Contact Srinivasa Steel Corporation for bulk steel, TMT rebars, and industrial decoiling requirements. Visit our branches in Vijayawada, Gannavaram, and Visakhapatnam." },
+      { property: "og:title", content: "Contact Srinivasa Steel Corporation | Locations in Vijayawada & Vizag" },
+      { property: "og:description", content: "Contact Srinivasa Steel Corporation for bulk steel, TMT rebars, and industrial decoiling requirements. Visit our branches in Vijayawada, Gannavaram, and Visakhapatnam." },
+      { property: "og:url", content: "https://srinivasasteels.com/contact" },
+      { property: "og:image", content: "https://srinivasasteels.com/hero/hero-5.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.srinivasasteelcorporation.com/contact" }
+      { rel: "canonical", href: "https://srinivasasteels.com/contact" }
     ],
     scripts: [
-      { type: "application/ld+json", children: JSON.stringify(breadcrumbSchema) }
+      { type: "application/ld+json", children: JSON.stringify(breadcrumbSchema) },
+      { type: "application/ld+json", children: JSON.stringify(localBusinessSchema) }
     ]
   }),
 });
@@ -284,7 +307,7 @@ function ContactPage() {
               maskComposite: 'intersect'
             }}
           >
-            <img src="/hero/contact-hero-map-mobile.jpg" alt="Srinivasa Steel Locations Map" className="w-full h-full object-contain object-bottom mix-blend-screen" />
+            <img src="/hero/contact-hero-map-mobile.jpg" alt="Srinivasa Steel Locations Map" fetchPriority="high" loading="eager" className="w-full h-full object-contain object-bottom mix-blend-screen" />
             
             {/* Interactive Overlay: Vijayawada (Mobile) */}
             <div 
@@ -327,7 +350,7 @@ function ContactPage() {
               maskComposite: 'intersect'
             }}
           >
-            <img src="/hero/contact-hero-map-full.png" alt="Srinivasa Steel Locations Map" className="w-full h-auto object-contain mix-blend-screen" />
+            <img src="/hero/contact-hero-map-full.png" alt="Srinivasa Steel Locations Map" fetchPriority="high" loading="eager" className="w-full h-auto object-contain mix-blend-screen" />
             
             {/* Interactive Overlay: Vijayawada (Desktop) */}
             <div 
@@ -704,60 +727,7 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════
-          TRUST / FEATURE STRIP
-      ════════════════════════════════════════════════ */}
-      <section className="bg-[#0B1929] py-8 lg:py-10">
-        <div className="container mx-auto px-5 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0">
-            
-            {/* Item 1 */}
-            <div className="flex items-center gap-4 lg:pr-6 xl:pr-8 lg:border-r border-white/[0.08]">
-              <div className="w-11 h-11 shrink-0 rounded-full bg-[#102238] border border-[#D9A928]/30 flex items-center justify-center">
-                <ShieldCheck className="text-[#D9A928]" size={18} strokeWidth={1.5} />
-              </div>
-              <div>
-                <h5 className="text-white font-[800] text-[11px] uppercase tracking-wider mb-0.5">PREMIUM QUALITY</h5>
-                <p className="text-white/50 text-[12px]">Tested & Certified</p>
-              </div>
-            </div>
 
-            {/* Item 2 */}
-            <div className="flex items-center gap-4 lg:px-6 xl:px-8 lg:border-r border-white/[0.08]">
-              <div className="w-11 h-11 shrink-0 rounded-full bg-[#102238] border border-[#D9A928]/30 flex items-center justify-center">
-                <Settings className="text-[#D9A928]" size={18} strokeWidth={1.5} />
-              </div>
-              <div>
-                <h5 className="text-white font-[800] text-[11px] uppercase tracking-wider mb-0.5">PRECISION ENGINEERED</h5>
-                <p className="text-white/50 text-[12px]">For Maximum Strength</p>
-              </div>
-            </div>
-
-            {/* Item 3 */}
-            <div className="flex items-center gap-4 lg:px-6 xl:px-8 lg:border-r border-white/[0.08]">
-              <div className="w-11 h-11 shrink-0 rounded-full bg-[#102238] border border-[#D9A928]/30 flex items-center justify-center">
-                <Factory className="text-[#D9A928]" size={18} strokeWidth={1.5} />
-              </div>
-              <div>
-                <h5 className="text-white font-[800] text-[11px] uppercase tracking-wider mb-0.5">WIDE PRODUCT RANGE</h5>
-                <p className="text-white/50 text-[12px]">TMT, Pipes, Wire & More</p>
-              </div>
-            </div>
-
-            {/* Item 4 */}
-            <div className="flex items-center gap-4 lg:pl-6 xl:pl-8">
-              <div className="w-11 h-11 shrink-0 rounded-full bg-[#102238] border border-[#D9A928]/30 flex items-center justify-center">
-                <Truck className="text-[#D9A928]" size={18} strokeWidth={1.5} />
-              </div>
-              <div>
-                <h5 className="text-white font-[800] text-[11px] uppercase tracking-wider mb-0.5">ON-TIME DELIVERY</h5>
-                <p className="text-white/50 text-[12px]">Reliable. Efficient. Always.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
     </div>
   );
