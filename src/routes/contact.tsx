@@ -565,7 +565,7 @@ function ContactPage() {
                       <Mail className="text-[#D9A928]" size={18} strokeWidth={1.5} />
                     </div>
                     <div>
-                      <a href="mailto:srinivasasteelcorporationvja@gmail.com" className="text-[15px] font-[700] text-[#071525] hover:text-[#D9A928] transition-colors block break-all">
+                      <a href="mailto:info@srinivasasteel.com?subject=Enquiry%20for%20Steel%20Products&body=Hello%20Srinivasa%20Steel%20Team%2C%0A%0AI%20would%20like%20to%20inquire%20about%20your%20products.%20Please%20get%20back%20to%20me.%0A%0ARegards%2C%0A" className="text-[15px] font-[700] text-[#071525] hover:text-[#D9A928] transition-colors block break-all">
                         info@srinivasasteel.com
                       </a>
                       <span className="text-[12px] text-[#071525]/50 font-medium">Email</span>
@@ -642,6 +642,62 @@ function ContactPage() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ════════════════════════════════════════════════
+              OUR LOCATIONS STRIP
+          ════════════════════════════════════════════════ */}
+          <div className="mt-12 lg:mt-16 border-t border-[#071525]/[0.06] pt-12 lg:pt-16">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-6 h-[2px] bg-[#D9A928]" />
+              <h3 className="text-[13px] font-[800] text-[#071525] uppercase tracking-wider">
+                OUR BRANCH LOCATIONS
+              </h3>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Card 1 */}
+              <div className="bg-white rounded-2xl shadow-sm border border-[#071525]/[0.06] p-6 sm:p-8 flex flex-col items-start hover:shadow-md transition-shadow group">
+                <div className="w-12 h-12 rounded-full bg-[#071525] group-hover:bg-[#D9A928] transition-colors flex items-center justify-center mb-5 shrink-0">
+                  <MapPin className="text-[#D9A928] group-hover:text-[#071525] transition-colors" size={20} strokeWidth={1.5} />
+                </div>
+                <h4 className="text-[16px] font-[800] text-[#071525] uppercase tracking-tight mb-2">VIJAYAWADA</h4>
+                <p className="text-[13px] text-[#071525]/70 mb-6 flex-1 font-medium">
+                  H.O. Bhavanipuram, Vijayawada
+                </p>
+                <a href="https://maps.app.goo.gl/mNQNBdwRZzgVxwDP8" target="_blank" rel="noreferrer" className="mt-auto text-[12px] font-[800] text-[#071525] hover:text-[#D9A928] uppercase tracking-wider flex items-center gap-2 transition-colors">
+                  VIEW ON MAPS <ArrowRight size={14} />
+                </a>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-white rounded-2xl shadow-sm border border-[#071525]/[0.06] p-6 sm:p-8 flex flex-col items-start hover:shadow-md transition-shadow group">
+                <div className="w-12 h-12 rounded-full bg-[#071525] group-hover:bg-[#D9A928] transition-colors flex items-center justify-center mb-5 shrink-0">
+                  <MapPin className="text-[#D9A928] group-hover:text-[#071525] transition-colors" size={20} strokeWidth={1.5} />
+                </div>
+                <h4 className="text-[16px] font-[800] text-[#071525] uppercase tracking-tight mb-2">GANNAVARAM</h4>
+                <p className="text-[13px] text-[#071525]/70 mb-6 flex-1 font-medium">
+                  B.O. Gannavaram Yard, Gannavaram
+                </p>
+                <a href="https://maps.app.goo.gl/FqgGiDRq6YWYh4iF7?g_st=iw" target="_blank" rel="noreferrer" className="mt-auto text-[12px] font-[800] text-[#071525] hover:text-[#D9A928] uppercase tracking-wider flex items-center gap-2 transition-colors">
+                  VIEW ON MAPS <ArrowRight size={14} />
+                </a>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-white rounded-2xl shadow-sm border border-[#071525]/[0.06] p-6 sm:p-8 flex flex-col items-start hover:shadow-md transition-shadow group">
+                <div className="w-12 h-12 rounded-full bg-[#071525] group-hover:bg-[#D9A928] transition-colors flex items-center justify-center mb-5 shrink-0">
+                  <MapPin className="text-[#D9A928] group-hover:text-[#071525] transition-colors" size={20} strokeWidth={1.5} />
+                </div>
+                <h4 className="text-[16px] font-[800] text-[#071525] uppercase tracking-tight mb-2">VISAKHAPATNAM</h4>
+                <p className="text-[13px] text-[#071525]/70 mb-6 flex-1 font-medium">
+                  Vizag Autonagar, Madam - 530046
+                </p>
+                <a href="https://www.google.com/maps/search/Vizag+Autonagar+Madam+-+530046/" target="_blank" rel="noreferrer" className="mt-auto text-[12px] font-[800] text-[#071525] hover:text-[#D9A928] uppercase tracking-wider flex items-center gap-2 transition-colors">
+                  VIEW ON MAPS <ArrowRight size={14} />
+                </a>
               </div>
             </div>
           </div>
