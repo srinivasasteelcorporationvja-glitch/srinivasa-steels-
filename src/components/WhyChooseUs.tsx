@@ -49,8 +49,8 @@ const strengths = [
 ];
 
 const StrengthCard = ({ item, isMobile = false }: { item: typeof strengths[0], isMobile?: boolean }) => (
-  <div className={`bg-white border border-ssc-navy/10 rounded-xl shadow-premium-soft flex flex-col group ${isMobile ? 'h-auto min-h-[380px] overflow-hidden' : 'h-full overflow-hidden'}`}>
-    <div className={`relative ${isMobile ? 'h-36 overflow-hidden' : 'h-48 sm:h-56 overflow-hidden'}`}>
+  <div className={`bg-white border border-ssc-navy/10 rounded-xl shadow-premium-soft flex flex-col group h-full overflow-hidden`}>
+    <div className={`relative ${isMobile ? 'aspect-[4/3]' : 'h-48 sm:h-56'} overflow-hidden shrink-0`}>
       <img 
         src={item.image} 
         alt={item.alt}
@@ -93,11 +93,14 @@ export const WhyChooseUs = () => {
 
   const handleScroll = () => {
     if (scrollRef.current) {
-      const scrollLeft = scrollRef.current.scrollLeft;
-      const width = scrollRef.current.offsetWidth * 0.85;
-      const index = Math.round(scrollLeft / width);
-      if (index !== activeIndex && index >= 0 && index < totalCards) {
-        setActiveIndex(index);
+      const container = scrollRef.current;
+      const card = container.children[0] as HTMLElement;
+      if (card) {
+        const gap = 24; // gap-6 is 24px
+        const index = Math.round(container.scrollLeft / (card.offsetWidth + gap));
+        if (index !== activeIndex && index >= 0 && index < totalCards) {
+          setActiveIndex(index);
+        }
       }
     }
   };
@@ -168,7 +171,7 @@ export const WhyChooseUs = () => {
           <div 
             ref={scrollRef}
             onScroll={handleScroll}
-            className="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar py-8 px-4"
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar py-8 px-4 items-stretch"
             style={{ 
               WebkitOverflowScrolling: 'touch',
               scrollPaddingLeft: '1rem',

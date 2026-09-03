@@ -76,7 +76,7 @@ const ProductCard = ({ product, index }: { product: typeof products[0], index: n
         <div className="absolute inset-0 opacity-[0.05] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] pointer-events-none z-10" />
 
         {/* Image Area */}
-        <div className="relative h-[160px] sm:h-[180px] lg:h-[240px] overflow-hidden shrink-0 bg-white">
+        <div className="relative aspect-[4/3] lg:aspect-auto lg:h-[240px] overflow-hidden shrink-0 bg-white">
           <img
             src={product.image}
             alt={product.alt}
@@ -132,15 +132,10 @@ const ProductShowcase = () => {
 
   const scrollToIndex = (index: number) => {
     if (containerRef.current) {
-      const container = containerRef.current;
-      const cardWidth = container.offsetWidth * 0.85;
-      const gap = 16; // gap-4 is 16px
-      const targetScroll = index * (cardWidth + gap);
-      
-      container.scrollTo({
-        left: targetScroll,
-        behavior: 'smooth'
-      });
+      const cards = Array.from(containerRef.current.children);
+      if (cards[index]) {
+        cards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
       setActiveIndex(index);
     }
   };
@@ -157,12 +152,14 @@ const ProductShowcase = () => {
 
   const onScroll = () => {
     if (containerRef.current) {
-      const { scrollLeft, offsetWidth } = containerRef.current;
-      const cardWidth = offsetWidth * 0.85;
-      const gap = 16;
-      const index = Math.round(scrollLeft / (cardWidth + gap));
-      if (index !== activeIndex && index >= 0 && index < totalCards) {
-        setActiveIndex(index);
+      const container = containerRef.current;
+      const card = container.children[0] as HTMLElement;
+      if (card) {
+        const gap = 16;
+        const index = Math.round(container.scrollLeft / (card.offsetWidth + gap));
+        if (index !== activeIndex && index >= 0 && index < totalCards) {
+          setActiveIndex(index);
+        }
       }
     }
   };
@@ -220,13 +217,13 @@ const ProductShowcase = () => {
           <div 
             ref={containerRef}
             onScroll={onScroll}
-            className="flex gap-4 overflow-x-auto overflow-y-hidden snap-x snap-mandatory no-scrollbar scroll-smooth pb-6 pt-2 touch-pan-x"
+            className="flex gap-4 overflow-x-auto overflow-y-hidden snap-x snap-mandatory no-scrollbar scroll-smooth pb-6 pt-2 touch-pan-x items-stretch"
             style={{ WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {products.map((product, index) => (
               <div 
                 key={product.index} 
-                className="flex-shrink-0 w-full snap-center"
+                className="flex-shrink-0 w-full snap-center h-auto"
               >
                 <ProductCard product={product} index={index} />
               </div>
