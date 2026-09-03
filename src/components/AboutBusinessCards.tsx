@@ -110,12 +110,7 @@ const SpecCard = ({ area, index }: { area: typeof businessAreas[0] & { logos?: s
             </span>
           </div>
 
-          {/* Technical Code */}
-          <div className="absolute top-3 right-3 z-20">
-            <span className="text-ssc-on-dark-primary/40 text-[10px] lg:text-micro lg:group-hover:text-ssc-gold/70 transition-colors duration-500 mix-blend-difference">
-              {area.code}
-            </span>
-          </div>
+
         </div>
 
         {/* Content Area */}

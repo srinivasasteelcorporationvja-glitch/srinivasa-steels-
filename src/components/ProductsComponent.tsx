@@ -222,8 +222,8 @@ export const ProductsComponent = () => {
       </section>
 
       {/* Cinematic Product Catalogue Section */}
-      {/* Background is F8FAFC to create a sharp contrast transition from the dark hero */}
-      <section id="product-catalogue" className="py-20 lg:py-32 bg-[#F8FAFC]">
+      {/* Background darkened to #EDF2F7 to create contrast with the white product cards */}
+      <section id="product-catalogue" className="py-20 lg:py-32 bg-[#EDF2F7]">
         <div className="container-wide px-4 sm:px-6">
           <div className="text-center mb-16 lg:mb-24">
             <motion.div
@@ -252,21 +252,21 @@ export const ProductsComponent = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.7, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="group flex flex-col bg-white border border-black/5 shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer overflow-hidden"
+                className="group flex flex-col bg-white border border-black/5 rounded-[16px] shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer overflow-hidden"
                 onClick={() => setSelectedProduct(product)}
               >
                 {/* Flat Image Banner */}
-                <div className="relative h-[240px] sm:h-[320px] w-full overflow-hidden">
+                <div className="relative h-[240px] sm:h-[320px] w-full overflow-hidden bg-white">
                   <motion.img 
                     src={product.image} 
                     alt={product.alt}
                     className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s] ease-[cubic-bezier(0.2,1,0.3,1)]"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-ssc-navy/10 group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-ssc-navy/5 group-hover:bg-transparent transition-colors duration-500" />
                 </div>
                 
-                {/* Flat Clean Content Area */}
+                {/* Clean Content Area */}
                 <div className="p-8 sm:p-10 flex flex-col flex-1 bg-white relative">
                   
                   {/* Location Badge */}
@@ -280,7 +280,7 @@ export const ProductsComponent = () => {
                     </span>
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-bold text-ssc-navy uppercase tracking-tighter mb-4 leading-none group-hover:text-ssc-gold-dark transition-colors">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-ssc-navy uppercase tracking-tighter mb-4 leading-none group-hover:text-ssc-gold-dark transition-colors duration-300">
                     {product.name}
                   </h3>
                   
@@ -292,7 +292,7 @@ export const ProductsComponent = () => {
                   <div className="mt-auto pt-6 border-t border-black/5">
                     <div className="flex flex-wrap gap-2">
                       {product.specs.map((spec) => (
-                        <div key={spec} className="px-3 py-1.5 bg-ssc-steel-light text-ssc-navy text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+                        <div key={spec} className="px-3 py-1.5 bg-ssc-steel-light text-ssc-navy text-[10px] sm:text-xs font-bold uppercase tracking-wider rounded">
                           {spec}
                         </div>
                       ))}
