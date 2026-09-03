@@ -93,15 +93,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Srinivasa Steel Corporation" },
       { property: "og:description", content: "Trusted steel and TMT supplier serving construction and industrial requirements since 1994." },
       { property: "og:url", content: "https://srinivasasteels.com" },
-      { property: "og:image", content: "https://srinivasasteels.com/favicon.png" }, 
-      { property: "og:image:width", content: "512" },
-      { property: "og:image:height", content: "512" },
+      { property: "og:image", content: "https://srinivasasteels.com/og-image.png" }, 
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       
       // Twitter
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "Srinivasa Steel Corporation" },
       { name: "twitter:description", content: "Trusted steel and TMT supplier serving construction and industrial requirements since 1994." },
-      { name: "twitter:image", content: "https://srinivasasteels.com/favicon.png" },
+      { name: "twitter:image", content: "https://srinivasasteels.com/og-image.png" },
     ],
     links: [
       {

@@ -49,7 +49,7 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About Srinivasa Steel Corporation | 40+ Years of Industrial Steel" },
       { property: "og:description", content: "Learn about Srinivasa Steel Corporation's 40+ year legacy, our advanced stockyard facilities in Vijayawada & Gannavaram, and our commitment to on-time steel delivery." },
       { property: "og:url", content: "https://srinivasasteels.com/about" },
-      { property: "og:image", content: "https://srinivasasteels.com/favicon.png" },
+      { property: "og:image", content: "https://srinivasasteels.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

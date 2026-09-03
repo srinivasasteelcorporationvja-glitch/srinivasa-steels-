@@ -86,7 +86,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact Srinivasa Steel Corporation | Locations in Vijayawada & Vizag" },
       { property: "og:description", content: "Contact Srinivasa Steel Corporation for bulk steel, TMT rebars, and industrial decoiling requirements. Visit our branches in Vijayawada, Gannavaram, and Visakhapatnam." },
       { property: "og:url", content: "https://srinivasasteels.com/contact" },
-      { property: "og:image", content: "https://srinivasasteels.com/favicon.png" },
+      { property: "og:image", content: "https://srinivasasteels.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

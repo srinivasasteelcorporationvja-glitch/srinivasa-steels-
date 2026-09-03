@@ -30,7 +30,7 @@ export const Route = createFileRoute("/gallery")({
       { property: "og:title", content: "Steel Yard & Facilities Gallery | Srinivasa Steel" },
       { property: "og:description", content: "View our visual portfolio of TMT rebars, structural steel products, and our advanced stockyard facilities equipped with crane loading in Vijayawada & Gannavaram." },
       { property: "og:url", content: "https://srinivasasteels.com/gallery" },
-      { property: "og:image", content: "https://srinivasasteels.com/favicon.png" },
+      { property: "og:image", content: "https://srinivasasteels.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
