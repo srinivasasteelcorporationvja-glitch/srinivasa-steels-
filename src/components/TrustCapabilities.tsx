@@ -33,7 +33,7 @@ export const TrustCapabilities = () => {
                 clip-path: polygon(58% 0, 100% 0, 100% 100%, 55% 100%, 42% 48%);
               }
               .clip-feature-card {
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
               }
             }
           `}</style>
@@ -52,12 +52,12 @@ export const TrustCapabilities = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="absolute z-30 bg-[#0B1929] w-[360px] p-8 pl-10 clip-feature-card pointer-events-auto shadow-2xl"
+          className="absolute z-30 bg-[#0B1929] w-[380px] p-8 pl-14 clip-feature-card pointer-events-auto shadow-2xl"
           style={{ top: '48%', left: '42%' }}
         >
           {/* Slanted Gold Left Border implemented via SVG inside the clipped card */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none">
-            <line x1="0" y1="0" x2="15%" y2="100%" stroke="#D9A928" strokeWidth="8" />
+            <line x1="0" y1="0" x2="10%" y2="100%" stroke="#D9A928" strokeWidth="8" />
           </svg>
 
           <div className="flex items-start gap-4 mb-3 relative z-10">

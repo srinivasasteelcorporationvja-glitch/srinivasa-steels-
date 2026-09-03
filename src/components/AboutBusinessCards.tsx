@@ -6,22 +6,10 @@ import tmtRebars from '@/assets/tmt-rebars.jpg';
 const businessAreas = [
   {
     index: "01",
-    code: "EXP-40Y",
-    title: "40+ YEARS EXPERIENCE",
-    description: "A legacy of trust and excellence in the steel industry since 1994, delivering unmatched reliability across South India.",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1200", // Foundation rebar
-    alt: "Premium steel industrial facility representing 40 years of excellence",
-    meta: [
-      { label: "ESTABLISHED", value: "1994" },
-      { label: "LEGACY", value: "4 DECADES" }
-    ]
-  },
-  {
-    index: "02",
     code: "LOG-DEL",
     title: "DELIVERY ON TIME",
     description: "Reliable and timely delivery to keep your projects moving without unnecessary delays.",
-    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=1200", // Heavy truck transport
+    image: "/images/stock/about page/discover over capabilities section/deliver on time_.png", // Heavy truck transport
     alt: "Heavy truck transporting steel materials for reliable delivery",
     meta: [
       { label: "LOGISTICS", value: "EFFICIENT" },
@@ -29,11 +17,11 @@ const businessAreas = [
     ]
   },
   {
-    index: "03",
+    index: "02",
     code: "WGT-FAC",
     title: "WEIGHMENT FACILITY",
     description: "Accurate weighment facility for transparent and reliable steel quantity verification.",
-    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&q=80&w=1200", // Industrial weighing facility
+    image: "/images/stock/about page/discover over capabilities section/weightment facility_.png", // Industrial weighing facility
     alt: "Industrial weighbridge facility for accurate steel weighment",
     meta: [
       { label: "ACCURACY", value: "PRECISION" },
@@ -41,11 +29,11 @@ const businessAreas = [
     ]
   },
   {
-    index: "04",
+    index: "03",
     code: "CRN-LDG",
     title: "CRANE LOADING & UNLOADING",
     description: "Crane loading and unloading capability for safe, efficient and faster material handling.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356f12?auto=format&fit=crop&q=80&w=1200", // Crane / loading
+    image: "/images/stock/about page/discover over capabilities section/crane loading and unloading_.png", // Crane / loading
     alt: "Industrial crane safely handling and loading heavy steel materials",
     meta: [
       { label: "HANDLING", value: "MECHANIZED" },
@@ -53,11 +41,11 @@ const businessAreas = [
     ]
   },
   {
-    index: "05",
+    index: "04",
     code: "CUT-SVC",
     title: "ALL SIZE CUTTINGS AVAILABLE",
     description: "Steel cutting available in all required sizes from 10 ft to 40 ft.",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=1200", // Steel cutting / sparks
+    image: "/images/stock/about page/discover over capabilities section/cutting available_.png", // Steel cutting / sparks
     alt: "Precision steel cutting equipment in operation",
     meta: [
       { label: "RANGE", value: "10 FT - 40 FT" },
@@ -65,11 +53,11 @@ const businessAreas = [
     ]
   },
   {
-    index: "06",
+    index: "05",
     code: "BLK-QTY",
     title: "BULK QUANTITY AVAILABLE",
     description: "Steel materials available in flexible quantities, from smaller requirements of 1–2 tons to larger bulk orders.",
-    image: tmtRebars,
+    image: "/images/stock/about page/discover over capabilities section/bulk quantity_.png",
     alt: "Large organized inventory of bulk TMT steel bars in stockyard",
     meta: [
       { label: "CAPACITY", value: "HIGH VOL" },
@@ -314,7 +302,7 @@ export const AboutBusinessCards = () => {
             className="hidden lg:flex flex-col items-end text-right border-l border-ssc-on-dark-primary/10 pl-8"
           >
             <span className="text-ssc-on-dark-secondary/30 text-micro mb-2">SSC / BUSINESS AREAS</span>
-            <span className="text-ssc-gold text-micro font-bold">06 DIVISIONS — EST. 1994</span>
+            <span className="text-ssc-gold text-micro font-bold">05 DIVISIONS — EST. 1994</span>
           </motion.div>
         </div>
 

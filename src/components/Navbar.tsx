@@ -162,7 +162,7 @@ export const Navbar = () => {
 
           {/* Desktop CTA */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="hidden md:block">
-            <Link to="/contact" search={{ product: "" }}>
+            <Link to="/contact" hash="quote-form" search={{ product: "" }}>
               <Button size="sm" className="bg-ssc-navy text-ssc-on-dark-primary hover:bg-ssc-navy/90 border-none shadow-premium-soft">
                 GET A QUOTE
                 <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -329,7 +329,7 @@ export const Navbar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.5 }}
                 >
-                  <Link to="/contact" search={{ product: "" }} onClick={() => setIsOpen(false)}>
+                  <Link to="/contact" hash="quote-form" search={{ product: "" }} onClick={() => setIsOpen(false)}>
                     <Button className="w-full h-[54px] text-[15px] font-bold 
                                      bg-[#d5a53a] text-ssc-navy hover:bg-[#d5a53a]/90 rounded-xl shadow-[0_6px_16px_rgba(212,175,55,0.25)] transition-all uppercase border-none">
                       GET A QUOTE <ArrowRight size={18} className="ml-2" />

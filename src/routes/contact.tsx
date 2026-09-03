@@ -277,10 +277,14 @@ function ContactPage() {
             style={{ 
               aspectRatio: '682/1024',
               height: 'min(80vh, 900px)',
-              maxWidth: '100%'
+              maxWidth: '100%',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+              WebkitMaskComposite: 'source-in',
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+              maskComposite: 'intersect'
             }}
           >
-            <img src="/hero/contact-hero-map-mobile.jpg" alt="Srinivasa Steel Locations Map" className="w-full h-full object-contain object-bottom" />
+            <img src="/hero/contact-hero-map-mobile.jpg" alt="Srinivasa Steel Locations Map" className="w-full h-full object-contain object-bottom mix-blend-screen" />
             
             {/* Interactive Overlay: Vijayawada (Mobile) */}
             <div 
@@ -314,8 +318,16 @@ function ContactPage() {
           </div>
 
           {/* DESKTOP IMAGE WRAPPER (Landscape) */}
-          <div className="relative w-[85%] max-w-[1400px] pointer-events-auto flex-shrink-0 hidden lg:block ml-auto">
-            <img src="/hero/contact-hero-map-full.png" alt="Srinivasa Steel Locations Map" className="w-full h-auto object-contain" />
+          <div 
+            className="relative lg:w-[75%] xl:w-[65%] max-w-[1400px] pointer-events-auto flex-shrink-0 hidden lg:block ml-auto"
+            style={{ 
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%, black 95%, transparent 100%)',
+              WebkitMaskComposite: 'source-in',
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%), linear-gradient(to right, transparent 0%, black 15%, black 95%, transparent 100%)',
+              maskComposite: 'intersect'
+            }}
+          >
+            <img src="/hero/contact-hero-map-full.png" alt="Srinivasa Steel Locations Map" className="w-full h-auto object-contain mix-blend-screen" />
             
             {/* Interactive Overlay: Vijayawada (Desktop) */}
             <div 
@@ -350,7 +362,7 @@ function ContactPage() {
         </div>
 
         {/* Dark gradient overlay to ensure text readability without covering the map */}
-        <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#071525] from-30% lg:from-10% via-[#071525]/90 via-50% lg:via-40% to-transparent to-70% lg:to-65% pointer-events-none z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-[#071525] from-30% lg:from-10% via-[#071525]/90 via-50% lg:via-30% to-transparent to-70% lg:to-55% pointer-events-none z-10" />
 
         <div className="container mx-auto px-5 sm:px-8 lg:px-12 relative z-20 flex-1 flex flex-col justify-start lg:justify-center pb-8 lg:pb-0 pt-[8vh] sm:pt-[12vh] lg:pt-0 mt-4 lg:mt-0">
           
@@ -413,16 +425,17 @@ function ContactPage() {
                 ) : (
                   <motion.div
                     key="form"
+                    id="quote-form"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm border border-[#071525]/[0.06]"
+                    className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm border border-[#071525]/[0.06] scroll-mt-32"
                   >
                     {/* Heading with icon */}
                     <div className="flex items-center gap-4 mb-8">
                       <div className="w-10 h-10 rounded-lg bg-[#071525] flex items-center justify-center shrink-0">
                         <Mail className="text-[#D9A928]" size={18} strokeWidth={1.5} />
                       </div>
-                      <h2 id="quote-form" className="text-[16px] sm:text-[18px] font-[800] text-[#071525] uppercase tracking-wide">
+                      <h2 className="text-[16px] sm:text-[18px] font-[800] text-[#071525] uppercase tracking-wide">
                         REQUEST A QUOTE
                       </h2>
                     </div>
@@ -566,7 +579,7 @@ function ContactPage() {
                     </div>
                     <div>
                       <p className="text-[16px] font-[700] text-[#071525]">
-                        Mon – Sat : 8:30 AM – 6:30 PM
+                        24/7 Available
                       </p>
                       <span className="text-[12px] text-[#071525]/50 font-medium">Working Hours</span>
                     </div>

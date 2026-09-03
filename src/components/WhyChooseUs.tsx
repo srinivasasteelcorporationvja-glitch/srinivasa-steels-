@@ -8,42 +8,42 @@ const strengths = [
     title: "40+ YEARS EXPERIENCE",
     description: "Built on a foundation of trust and industrial expertise since 1994.",
     label: "FOUNDATION-94",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1200", // Foundation / Industrial yard
+    image: "/images/stock/about page/discover over capabilities section/40 years experience_.png", // Foundation / Industrial yard
     alt: "Premium steel stockyard representing 40 years of excellence"
   },
   {
     title: "STEEL & TMT SUPPLY",
     description: "Comprehensive range of high-grade construction and structural steel.",
     label: "SPEC-550D",
-    image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=800&auto=format&fit=crop", // TMT Rebars
+    image: "/images/stock/about page/business strenghts/steel and tmt supply.png", // TMT Rebars
     alt: "High-quality TMT reinforcement steel rebars"
   },
   {
     title: "WIRE PRODUCTS",
     description: "Extensive inventory of high-quality industrial and construction wire.",
     label: "WIRE-SEC-01",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop", // Wire coils
+    image: "/images/stock/about page/business strenghts/wire products.jpg", // Wire coils
     alt: "Industrial steel wire coils"
   },
   {
     title: "DECOILING SOLUTIONS",
     description: "Precision engineered processing for custom industrial requirements.",
     label: "PROC-DECOIL",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop", // Processing / Machinery
+    image: "/images/stock/about page/business strenghts/decoiling solutions 2.jpg", // Processing / Machinery
     alt: "Industrial steel processing machinery"
   },
   {
     title: "MOU / DEALER RELATIONS",
     description: "Direct supply relationships ensuring material authenticity and availability.",
     label: "PARTNER-CERT",
-    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop", // Professional distribution
+    image: "/images/stock/about page/business strenghts/mou.png", // Professional distribution
     alt: "Professional steel distribution and warehouse"
   },
   {
     title: "REGIONAL PRESENCE",
     description: "Strategically located yards in Vijayawada, Gannavaram, and Vizag.",
     label: "DIST-NETWORK",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop", // Logistics
+    image: "/images/stock/about page/business strenghts/reginal presence_.png", // Logistics
     alt: "Steel logistics and regional distribution center"
   }
 ];

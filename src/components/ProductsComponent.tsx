@@ -15,7 +15,7 @@ const catalogue = [
     locationType: "Supply Yard",
     name: "TMT REBARS",
     description: "Premium high-strength TMT reinforcement bars supplied for residential, commercial, and industrial infrastructure.",
-    image: tmtRebars,
+    image: "/images/stock/products/tmt rebars.png",
     alt: "High-quality ribbed TMT reinforcement steel bars",
     specs: ["8mm", "10mm", "12mm", "16mm", "20mm", "25mm", "32mm"]
   },
@@ -25,7 +25,7 @@ const catalogue = [
     locationType: "Manufacturing Unit",
     name: "6MM TMT",
     description: "In-house manufactured 6mm TMT bars offering superior strength and ductility for specialized structural requirements.",
-    image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=800&auto=format&fit=crop",
+    image: "/images/stock/products/6MM TMT.png",
     alt: "6mm TMT steel bars manufactured by Srinivasa Steel",
     specs: ["6mm TMT"]
   },
@@ -35,7 +35,7 @@ const catalogue = [
     locationType: "Manufacturing Unit",
     name: "5MM & 5.5MM TMT",
     description: "Precision-manufactured small diameter TMT for versatile construction applications.",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop",
+    image: "/images/stock/products/5MM TMT_.png",
     alt: "Small diameter steel rods and 5mm TMT",
     specs: ["5mm", "5.5mm"]
   },
@@ -45,7 +45,7 @@ const catalogue = [
     locationType: "Manufacturing Unit",
     name: "BINDING WIRE",
     description: "High-quality industrial binding wire for secure reinforcement anchoring and construction ties.",
-    image: wireCoils,
+    image: "/images/stock/products/BINDING WIRES.png",
     alt: "Industrial steel binding wire coils",
     specs: ["Binding Wire"]
   },
@@ -55,9 +55,29 @@ const catalogue = [
     locationType: "Manufacturing Unit",
     name: "STEEL RODS",
     description: "Standard industrial steel rods and wire rods for diverse mechanical and fabrication needs.",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop",
+    image: "/images/stock/products/STEEL RODS.png",
     alt: "Organized steel stock showing small diameter steel rods",
     specs: ["4mm", "5mm", "6mm"]
+  },
+  {
+    id: "jindal-steels",
+    location: "JINDAL STEEL PRODUCTS",
+    locationType: "AUTHORIZED DEALER",
+    name: "JINDAL STEELS",
+    description: "Premium Jindal steel products supplied for construction, fabrication and industrial applications, offering dependable quality, strength and consistent performance.",
+    image: "/images/stock/products/JINDAL SHETS_.png",
+    alt: "Jindal structural steel products",
+    specs: ["STRUCTURAL STEEL", "STEEL SECTIONS", "INDUSTRIAL STEEL"]
+  },
+  {
+    id: "jindal-pipes",
+    location: "JINDAL PIPE PRODUCTS",
+    locationType: "AUTHORIZED DEALER",
+    name: "JINDAL PIPES",
+    description: "Reliable Jindal steel pipes for construction, fabrication, infrastructure and industrial requirements, designed for strength, durability and consistent quality.",
+    image: "/images/stock/products/JINDAL PIPES.png",
+    alt: "Jindal steel pipes and hollow sections",
+    specs: ["STEEL PIPES", "HOLLOW SECTIONS", "INDUSTRIAL PIPES"]
   }
 ];
 
@@ -364,7 +384,7 @@ export const ProductsComponent = () => {
              >
                <div className="absolute inset-0 z-0">
                  <img 
-                   src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=1200&auto=format&fit=crop" 
+                   src="/images/stock/products/REQUEST A QUOTE_.png" 
                    alt="Premium Engineered Steel"
                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-[cubic-bezier(0.2,1,0.3,1)]"
                  />
