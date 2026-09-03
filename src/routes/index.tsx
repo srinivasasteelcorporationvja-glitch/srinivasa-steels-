@@ -62,7 +62,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Srinivasa Steel Corporation | TMT Bars & Steel Supplier" },
       { property: "og:description", content: "Srinivasa Steel Corporation supplies high-quality TMT rebars, structural steel, and wire products for construction and industrial needs across Vijayawada, Gannavaram, and Visakhapatnam. 40+ years of trust." },
       { property: "og:url", content: "https://srinivasasteels.com/" },
-      { property: "og:image", content: "https://srinivasasteels.com/hero/hero-5.jpg" },
+      { property: "og:image", content: "https://srinivasasteels.com/favicon.png" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

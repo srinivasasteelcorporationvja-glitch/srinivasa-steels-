@@ -67,7 +67,7 @@ export const Route = createFileRoute("/products")({
       { property: "og:title", content: "TMT Rebars, Steel Pipes & Wire Products | Srinivasa Steel" },
       { property: "og:description", content: "Explore our range of high-quality TMT rebars (8mm-32mm), structural steel, binding wire, and decoiling solutions for industrial needs across Andhra Pradesh." },
       { property: "og:url", content: "https://srinivasasteels.com/products" },
-      { property: "og:image", content: "https://srinivasasteels.com/hero/hero-5.jpg" },
+      { property: "og:image", content: "https://srinivasasteels.com/favicon.png" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
