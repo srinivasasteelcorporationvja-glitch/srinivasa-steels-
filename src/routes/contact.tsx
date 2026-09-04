@@ -36,27 +36,70 @@ const breadcrumbSchema = {
   ]
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Srinivasa Steel Corporation - Vijayawada",
-  "image": "https://srinivasasteels.com/logo.svg",
-  "url": "https://srinivasasteels.com/contact",
-  "telephone": "+91-9440170453",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Plot No. 90, Iron Complex, Godown Block No. 36/3, Bhavanipuram",
-    "addressLocality": "Vijayawada",
-    "addressRegion": "Andhra Pradesh",
-    "postalCode": "520012",
-    "addressCountry": "IN"
+const localBusinessSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Srinivasa Steel Corporation - Vijayawada",
+    "image": "https://srinivasasteels.com/logo.svg",
+    "url": "https://srinivasasteels.com/contact",
+    "telephone": "+91-9440170453",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot No. 90, Iron Complex, Godown Block No. 36/3, Bhavanipuram",
+      "addressLocality": "Vijayawada",
+      "addressRegion": "Andhra Pradesh",
+      "postalCode": "520012",
+      "addressCountry": "IN"
+    },
+    "branchOf": {
+      "@type": "Organization",
+      "name": "Srinivasa Steel Corporation",
+      "url": "https://srinivasasteels.com/"
+    }
   },
-  "branchOf": {
-    "@type": "Organization",
-    "name": "Srinivasa Steel Corporation",
-    "url": "https://srinivasasteels.com/"
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Srinivasa Steel Corporation - Gannavaram",
+    "image": "https://srinivasasteels.com/logo.svg",
+    "url": "https://srinivasasteels.com/contact",
+    "telephone": "+91-9440170453",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "B.O. Gannavaram Yard",
+      "addressLocality": "Gannavaram",
+      "addressRegion": "Andhra Pradesh",
+      "addressCountry": "IN"
+    },
+    "branchOf": {
+      "@type": "Organization",
+      "name": "Srinivasa Steel Corporation",
+      "url": "https://srinivasasteels.com/"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Srinivasa Steel Corporation - Visakhapatnam",
+    "image": "https://srinivasasteels.com/logo.svg",
+    "url": "https://srinivasasteels.com/contact",
+    "telephone": "+91-9440170453",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Vizag Autonagar, Madam",
+      "addressLocality": "Visakhapatnam",
+      "addressRegion": "Andhra Pradesh",
+      "postalCode": "530046",
+      "addressCountry": "IN"
+    },
+    "branchOf": {
+      "@type": "Organization",
+      "name": "Srinivasa Steel Corporation",
+      "url": "https://srinivasasteels.com/"
+    }
   }
-};
+];
 
 const contactSchema = z.object({
   fullName: z.string().min(2, "Full Name is required"),
@@ -94,7 +137,10 @@ export const Route = createFileRoute("/contact")({
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(breadcrumbSchema) },
-      { type: "application/ld+json", children: JSON.stringify(localBusinessSchema) }
+      ...localBusinessSchemas.map(schema => ({
+        type: "application/ld+json" as const,
+        children: JSON.stringify(schema)
+      }))
     ]
   }),
 });

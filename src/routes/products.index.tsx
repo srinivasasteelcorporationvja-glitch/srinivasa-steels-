@@ -58,14 +58,14 @@ const itemListSchema = {
 };
 
 
-export const Route = createFileRoute("/products")({
+export const Route = createFileRoute("/products/")({
   component: ProductsPage,
   head: () => ({
     meta: [
-      { title: "TMT Rebars, Steel Pipes & Wire Products | Srinivasa Steel" },
-      { name: "description", content: "Explore our range of high-quality TMT rebars (8mm-32mm), structural steel, binding wire, and decoiling solutions for industrial needs across Andhra Pradesh." },
-      { property: "og:title", content: "TMT Rebars, Steel Pipes & Wire Products | Srinivasa Steel" },
-      { property: "og:description", content: "Explore our range of high-quality TMT rebars (8mm-32mm), structural steel, binding wire, and decoiling solutions for industrial needs across Andhra Pradesh." },
+      { title: "Steel Products & TMT Bars in Vijayawada | Srinivasa Steel Corporation" },
+      { name: "description", content: "Explore our premium range of high-quality TMT rebars (8mm-32mm), structural steel, binding wire, and decoiling solutions for industrial needs across Andhra Pradesh, including Vijayawada and Vizag." },
+      { property: "og:title", content: "Steel Products & TMT Bars | Srinivasa Steel Corporation" },
+      { property: "og:description", content: "Explore our premium range of high-quality TMT rebars (8mm-32mm), structural steel, binding wire, and decoiling solutions for industrial needs across Andhra Pradesh, including Vijayawada and Vizag." },
       { property: "og:url", content: "https://srinivasasteels.com/products" },
       { property: "og:image", content: "https://srinivasasteels.com/og-image.png" },
       { name: "twitter:card", content: "summary_large_image" },

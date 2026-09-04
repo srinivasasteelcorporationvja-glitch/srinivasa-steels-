@@ -26,17 +26,27 @@ const breadcrumbSchema = {
   ]
 };
 
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "mainEntity": {
+    "@id": "https://srinivasasteels.com/#organization"
+  }
+};
+
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Srinivasa Steel Corporation",
   "url": "https://srinivasasteels.com/",
   "logo": "https://srinivasasteels.com/logo.svg",
+  "@id": "https://srinivasasteels.com/#organization",
+  "description": "Srinivasa Steel Corporation is an established steel supplier serving construction, infrastructure and industrial requirements across Vijayawada, Bhavanipuram, Gannavaram, and Visakhapatnam.",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+91-9440170453",
     "contactType": "customer service",
-    "areaServed": "IN"
+    "areaServed": ["Vijayawada", "Bhavanipuram", "Gannavaram", "Visakhapatnam", "Andhra Pradesh"]
   }
 };
 
@@ -44,9 +54,9 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About Srinivasa Steel Corporation | 40+ Years of Industrial Steel" },
+      { title: "About Srinivasa Steel Corporation | Steel Supplier in Andhra Pradesh" },
       { name: "description", content: "Learn about Srinivasa Steel Corporation's 40+ year legacy, our advanced stockyard facilities in Vijayawada & Gannavaram, and our commitment to on-time steel delivery." },
-      { property: "og:title", content: "About Srinivasa Steel Corporation | 40+ Years of Industrial Steel" },
+      { property: "og:title", content: "About Srinivasa Steel Corporation | Steel Supplier in Andhra Pradesh" },
       { property: "og:description", content: "Learn about Srinivasa Steel Corporation's 40+ year legacy, our advanced stockyard facilities in Vijayawada & Gannavaram, and our commitment to on-time steel delivery." },
       { property: "og:url", content: "https://srinivasasteels.com/about" },
       { property: "og:image", content: "https://srinivasasteels.com/og-image.png" },
@@ -57,7 +67,8 @@ export const Route = createFileRoute("/about")({
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(breadcrumbSchema) },
-      { type: "application/ld+json", children: JSON.stringify(organizationSchema) }
+      { type: "application/ld+json", children: JSON.stringify(organizationSchema) },
+      { type: "application/ld+json", children: JSON.stringify(aboutPageSchema) }
     ]
   }),
 });

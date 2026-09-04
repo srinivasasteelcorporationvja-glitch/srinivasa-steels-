@@ -163,7 +163,7 @@ export const HeroSection = () => {
               
               {/* Description */}
               <p className="text-[14px] sm:text-[15px] lg:text-[18px] text-white/80 max-w-[480px] mb-6 sm:mb-8 lg:mb-10 leading-snug">
-                Engineered steel products for construction and industrial requirements. Reliable supply across Andhra Pradesh since 1994.
+                Engineered steel products for construction and industrial requirements. Reliable supply across Vijayawada, Bhavanipuram, Gannavaram, and Visakhapatnam since 1994.
               </p>
               
               {/* CTA Buttons */}

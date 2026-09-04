@@ -20,7 +20,12 @@ const breadcrumbSchema = {
   ]
 };
 
-
+const imageGallerySchema = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Steel Yard & Facilities Gallery | Srinivasa Steel Corporation",
+  "description": "Visual portfolio of TMT rebars, structural steel products, and advanced stockyard facilities in Vijayawada & Gannavaram."
+};
 export const Route = createFileRoute("/gallery")({
   component: GalleryPage,
   head: () => ({
@@ -37,7 +42,8 @@ export const Route = createFileRoute("/gallery")({
       { rel: "canonical", href: "https://srinivasasteels.com/gallery" }
     ],
     scripts: [
-      { type: "application/ld+json", children: JSON.stringify(breadcrumbSchema) }
+      { type: "application/ld+json", children: JSON.stringify(breadcrumbSchema) },
+      { type: "application/ld+json", children: JSON.stringify(imageGallerySchema) }
     ]
   }),
 });

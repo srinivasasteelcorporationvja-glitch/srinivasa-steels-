@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  ScrollRestoration,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 import { Toaster } from "@/components/ui/sonner";
@@ -85,22 +86,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       // Standard SEO
       { title: "Srinivasa Steel Corporation" },
-      { name: "description", content: "Trusted steel and TMT supplier serving construction and industrial requirements since 1994." },
+      { name: "description", content: "Trusted steel and TMT supplier serving construction and industrial requirements since 1994. Serving Vijayawada, Bhavanipuram, Gannavaram, and Visakhapatnam." },
       
       // Open Graph / WhatsApp / Facebook
       { property: "og:site_name", content: "Srinivasa Steel Corporation" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Srinivasa Steel Corporation" },
-      { property: "og:description", content: "Trusted steel and TMT supplier serving construction and industrial requirements since 1994." },
+      { property: "og:title", content: "Srinivasa Steel Corporation | TMT Bars & Steel Supplier" },
+      { property: "og:description", content: "Trusted steel and TMT supplier serving construction and industrial requirements since 1994. Serving Vijayawada, Bhavanipuram, Gannavaram, and Visakhapatnam." },
       { property: "og:url", content: "https://srinivasasteels.com" },
       { property: "og:image", content: "https://srinivasasteels.com/og-image.png" }, 
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       
       // Twitter
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Srinivasa Steel Corporation" },
-      { name: "twitter:description", content: "Trusted steel and TMT supplier serving construction and industrial requirements since 1994." },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Srinivasa Steel Corporation | TMT Bars & Steel Supplier" },
+      { name: "twitter:description", content: "Trusted steel and TMT supplier serving construction and industrial requirements since 1994. Serving Vijayawada, Bhavanipuram, Gannavaram, and Visakhapatnam." },
       { name: "twitter:image", content: "https://srinivasasteels.com/og-image.png" },
     ],
     links: [
@@ -138,6 +139,7 @@ function RootShell({ children }: { children: ReactNode }) {
       </head>
       <body className="antialiased bg-[#0B1320] selection:bg-ssc-gold selection:text-ssc-navy">
         {children}
+        <ScrollRestoration />
         <Scripts />
       </body>
     </html>

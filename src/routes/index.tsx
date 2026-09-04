@@ -14,11 +14,12 @@ const organizationSchema = {
   "name": "Srinivasa Steel Corporation",
   "url": "https://srinivasasteels.com/",
   "logo": "https://srinivasasteels.com/logo.svg",
+  "description": "Established steel supplier serving construction, infrastructure and industrial requirements.",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+91-9440170453",
     "contactType": "customer service",
-    "areaServed": "IN",
+    "areaServed": ["Vijayawada", "Bhavanipuram", "Gannavaram", "Visakhapatnam", "Andhra Pradesh"],
     "availableLanguage": ["en", "te"]
   }
 };
@@ -38,6 +39,25 @@ const localBusinessSchema = {
     "postalCode": "520012",
     "addressCountry": "IN"
   },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Vijayawada"
+    },
+    {
+      "@type": "City",
+      "name": "Bhavanipuram"
+    },
+    {
+      "@type": "City",
+      "name": "Gannavaram"
+    },
+    {
+      "@type": "City",
+      "name": "Visakhapatnam"
+    }
+  ],
+  "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-18:00",
   "description": "Trusted supplier of TMT rebars, structural steel, and industrial steel products with 40+ years of experience serving Vijayawada, Gannavaram, and Visakhapatnam."
 };
 

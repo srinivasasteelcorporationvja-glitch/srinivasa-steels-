@@ -8,79 +8,7 @@ import { Button } from "@/components/ui/button";
 import tmtRebars from "@/assets/tmt-rebars.jpg";
 import wireCoils from "@/assets/wire-coils.jpg";
 
-const catalogue = [
-  {
-    id: "tmt-rebars",
-    location: "GANNAVARAM & VIZAG",
-    locationType: "Supply Yard",
-    name: "TMT REBARS",
-    description: "Premium high-strength TMT reinforcement bars supplied for residential, commercial, and industrial infrastructure.",
-    image: "/images/stock/products/tmt rebars.png",
-    alt: "High-quality ribbed TMT reinforcement steel bars",
-    specs: ["8mm", "10mm", "12mm", "16mm", "20mm", "25mm", "32mm"]
-  },
-  {
-    id: "6mm-tmt",
-    location: "BHAVANIPURAM — IRON COMPLEX, VIJAYAWADA",
-    locationType: "Manufacturing Unit",
-    name: "6MM TMT",
-    description: "In-house manufactured 6mm TMT bars offering superior strength and ductility for specialized structural requirements.",
-    image: "/images/stock/products/6MM TMT.png",
-    alt: "6mm TMT steel bars manufactured by Srinivasa Steel",
-    specs: ["6mm TMT"]
-  },
-  {
-    id: "small-tmt",
-    location: "BHAVANIPURAM",
-    locationType: "Manufacturing Unit",
-    name: "5MM & 5.5MM TMT",
-    description: "Precision-manufactured small diameter TMT for versatile construction applications.",
-    image: "/images/stock/products/5MM TMT_.png",
-    alt: "Small diameter steel rods and 5mm TMT",
-    specs: ["5mm", "5.5mm"]
-  },
-  {
-    id: "binding-wire",
-    location: "BHAVANIPURAM",
-    locationType: "Manufacturing Unit",
-    name: "BINDING WIRE",
-    description: "High-quality industrial binding wire for secure reinforcement anchoring and construction ties.",
-    image: "/images/stock/products/BINDING WIRES.png",
-    alt: "Industrial steel binding wire coils",
-    specs: ["Binding Wire"]
-  },
-  {
-    id: "steel-rods",
-    location: "BHAVANIPURAM",
-    locationType: "Manufacturing Unit",
-    name: "STEEL RODS",
-    description: "Standard industrial steel rods and wire rods for diverse mechanical and fabrication needs.",
-    image: "/images/stock/products/STEEL RODS.png",
-    alt: "Organized steel stock showing small diameter steel rods",
-    specs: ["4mm", "5mm", "6mm"]
-  },
-  {
-    id: "jindal-steels",
-    location: "JINDAL STEEL PRODUCTS",
-    locationType: "AUTHORIZED DEALER",
-    name: "JINDAL STEELS",
-    description: "Premium Jindal steel products supplied for construction, fabrication and industrial applications, offering dependable quality, strength and consistent performance.",
-    image: "/images/stock/products/JINDAL SHETS_.png",
-    alt: "Jindal structural steel products",
-    specs: ["STRUCTURAL STEEL", "STEEL SECTIONS", "INDUSTRIAL STEEL"]
-  },
-  {
-    id: "jindal-pipes",
-    location: "JINDAL PIPE PRODUCTS",
-    locationType: "AUTHORIZED DEALER",
-    name: "JINDAL PIPES",
-    description: "Reliable Jindal steel pipes for construction, fabrication, infrastructure and industrial requirements, designed for strength, durability and consistent quality.",
-    image: "/images/stock/products/JINDAL PIPES.png",
-    alt: "Jindal steel pipes and hollow sections",
-    specs: ["STEEL PIPES", "HOLLOW SECTIONS", "INDUSTRIAL PIPES"]
-  }
-];
-
+import { catalogue } from "@/lib/products-data";
 const heroImages = [
   "/hero/products-bg-1.jpg",
   "/hero/products-bg-2.jpg",
@@ -88,7 +16,6 @@ const heroImages = [
 ];
 
 export const ProductsComponent = () => {
-  const [selectedProduct, setSelectedProduct] = useState<typeof catalogue[0] | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -246,15 +173,19 @@ export const ProductsComponent = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {catalogue.map((product, index) => (
-              <motion.div
+              <Link
                 key={product.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.7, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="group flex flex-col bg-white border border-black/5 rounded-[16px] shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer overflow-hidden"
-                onClick={() => setSelectedProduct(product)}
+                to="/products/$productId"
+                params={{ productId: product.id }}
+                className="group flex flex-col bg-white border border-black/5 rounded-[16px] shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer overflow-hidden block"
               >
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.7, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  className="w-full h-full flex flex-col"
+                >
                 {/* Flat Image Banner */}
                 <div className="relative h-[240px] sm:h-[320px] w-full overflow-hidden bg-white">
                   <motion.img 
@@ -305,8 +236,9 @@ export const ProductsComponent = () => {
                       VIEW FULL DETAILS <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
-                </div>
-              </motion.div>
+                  </div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
@@ -418,94 +350,6 @@ export const ProductsComponent = () => {
         </div>
       </section>
 
-      {/* Premium Product Detail Modal using Framer Motion for Perfect Animation */}
-      <AnimatePresence>
-        {selectedProduct && (
-          <div className="fixed inset-0 z-[150] flex items-center justify-center p-4 sm:p-6 pointer-events-auto">
-            {/* Backdrop */}
-            <motion.div 
-              initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
-              animate={{ opacity: 1, backdropFilter: "blur(8px)" }}
-              exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="absolute inset-0 bg-black/60"
-              onClick={() => setSelectedProduct(null)}
-            />
-            
-            {/* Modal Content */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-[900px] bg-white shadow-2xl flex flex-col md:flex-row overflow-hidden max-h-[90vh] md:max-h-[80vh] rounded-xl z-10"
-            >
-              {/* Close Button */}
-              <button 
-                onClick={() => setSelectedProduct(null)}
-                className="absolute right-4 top-4 z-50 w-10 h-10 rounded-full flex items-center justify-center transition-colors shadow-sm backdrop-blur-md border 
-                           bg-white/20 text-white hover:bg-white/90 hover:text-ssc-navy border-white/30
-                           md:bg-black/5 md:text-ssc-navy md:hover:bg-ssc-navy md:hover:text-white md:border-black/10"
-              >
-                <X size={18} strokeWidth={2.5} />
-              </button>
-
-              {/* Image Section (Top on mobile, Left on desktop) */}
-              <div className="w-full md:w-1/2 relative bg-ssc-navy shrink-0 aspect-[4/3] md:aspect-auto">
-                <img 
-                  src={selectedProduct.image} 
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#050A13]/80 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 z-10">
-                  <span className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-[10px] font-bold tracking-widest uppercase mb-4 rounded-full">
-                    <MapPin size={12} className="text-ssc-gold" /> {selectedProduct.location}
-                  </span>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold uppercase leading-tight tracking-tighter drop-shadow-md">
-                    {selectedProduct.name}
-                  </h2>
-                </div>
-              </div>
-
-              {/* Content Section (Bottom on mobile, Right on desktop) */}
-              <div className="w-full md:w-1/2 p-6 sm:p-8 md:p-10 flex flex-col bg-[#F8FAFC] overflow-y-auto">
-                
-                <div className="flex-1">
-                  <h4 className="text-[11px] text-ssc-gray-body font-bold uppercase tracking-widest mb-3 flex items-center gap-2">
-                    <span className="w-4 h-[1px] bg-ssc-gold-dark" /> Description
-                  </h4>
-                  <p className="text-[15px] sm:text-base text-ssc-navy mb-8 leading-relaxed font-medium">
-                    {selectedProduct.description}
-                  </p>
-                  
-                  <h4 className="text-[11px] text-ssc-navy font-bold uppercase tracking-widest mb-4 border-b border-black/5 pb-3">
-                    Available Specifications
-                  </h4>
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {selectedProduct.specs.map((spec) => (
-                      <div key={spec} className="px-4 py-2 bg-white border border-black/5 text-ssc-navy text-[11px] font-bold uppercase tracking-wider flex items-center gap-2 rounded-md shadow-sm">
-                        <CheckCircle2 size={14} className="text-ssc-gold-dark shrink-0" />
-                        {spec}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* CTA Area */}
-                <div className="mt-auto pt-6 border-t border-black/10">
-                  <Link to="/contact" search={{ product: selectedProduct.name }} onClick={() => setSelectedProduct(null)}>
-                    <Button className="w-full h-14 bg-ssc-navy hover:bg-ssc-gold text-white hover:text-ssc-navy font-bold uppercase text-[13px] tracking-[0.15em] rounded-lg shadow-[0_8px_20px_rgba(11,19,32,0.2)] transition-all duration-300 flex items-center justify-center gap-3 group border-none">
-                      REQUEST A QUOTE <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                </div>
-
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
     </div>
   );
 };
