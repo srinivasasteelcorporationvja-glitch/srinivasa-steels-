@@ -5,8 +5,10 @@ import "lenis/dist/lenis.css";
 export function SmoothScrollController() {
   useEffect(() => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const isMobile = window.matchMedia("(max-width: 1024px)");
+    const isTouch = window.matchMedia("(pointer: coarse)");
 
-    if (reducedMotion.matches) return;
+    if (reducedMotion.matches || isMobile.matches || isTouch.matches) return;
 
     const lenis = new Lenis({
       autoRaf: true,

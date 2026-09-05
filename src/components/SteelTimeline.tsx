@@ -110,7 +110,7 @@ export const SteelTimeline = () => {
                   WebkitTextStroke: '1px rgba(255,255,255,0.3)',
                   textShadow: '0px 1px 1px rgba(255,255,255,0.6), 0px -1px 1px rgba(0,0,0,0.6)'
                 }}>
-                SSC TMT 500 D
+                SSC TMT Fe 550D
               </div>
             </div>
 
